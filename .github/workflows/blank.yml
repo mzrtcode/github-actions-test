@@ -39,6 +39,8 @@ jobs:
 
           echo "Este es el valor del username ${{env.username}}"
           echo "Este el valor de password: ${{env.password}}"
+
+
     
       - name: "Mostrando variables por defecto"
         run: |
@@ -52,4 +54,5 @@ jobs:
         if: ${{env.username == 'mzrt' && env.password != ''}}
         run: |
           echo "Si existe el usuario :)"
+          echo "Project version ${{vars.PROJECT_VERSION}}"
            
