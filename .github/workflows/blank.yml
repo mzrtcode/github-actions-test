@@ -32,7 +32,6 @@ jobs:
         run: echo "Hola mundo"
 
       - name: "Mostrando variables de entorno :)"
-        if: ${{env.platform == 'azure'}}
         run: |
           echo "Esto es el valor de Platform ${{env.platform}}"
           echo "Este es el valor de Region: ${{env.region}}"
@@ -49,3 +48,8 @@ jobs:
         run: |
           echo "GITHUB_ACTOR: $GITHUB_ACTOR	"
           echo "GITHUB_REPOSITORY $GITHUB_REPOSITORY"
+      - name: "Mostrando valores solo si el usuario es correcto :)"
+        if: ${{env.username == 'mzrt' && env.password != ''}}
+        run: |
+          echo "Si existe el usuario :)"
+           
