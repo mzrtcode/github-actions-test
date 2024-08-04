@@ -33,5 +33,5 @@ jobs:
         run: |
           echo "Esto es el valor de Platform ${{env.platform}}"
           echo "Este es el valor de Region: ${{env.region}}"
-          echo "Este es el valor de Account: ${{env.account}}
+          echo "Este es el valor de Account: ${{env.account}}"
 
